@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BorsaProjesi
 {
-    public partial class Form1 : Form
+    public partial class KullaniciEkrani : Form
     {
-        public Form1()
+        public KullaniciEkrani()
         {
             InitializeComponent();
         }

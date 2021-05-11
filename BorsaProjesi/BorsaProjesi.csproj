@@ -46,16 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AdminPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AdminPaneli.Designer.cs">
+      <DependentUpon>AdminPaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bakiye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bakiye.Designer.cs">
+      <DependentUpon>Bakiye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KayitOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KayitOl.Designer.cs">
+      <DependentUpon>KayitOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciEkrani.Designer.cs">
+      <DependentUpon>KullaniciEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SatinAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatinAl.Designer.cs">
+      <DependentUpon>SatinAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunEkle.Designer.cs">
+      <DependentUpon>UrunEkle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KayitOl.resx">
+      <DependentUpon>KayitOl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +117,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="vt.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
