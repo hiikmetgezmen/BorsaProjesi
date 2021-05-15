@@ -15,13 +15,13 @@ namespace BorsaProjesi
 
     public partial class Login : Form
     {
+        public static string Ad, Soyad, Kullaniciadi, Sifre, Tckimlikno, Telefon, Email, Adres;
         public Login()
         {
             InitializeComponent();
-           // kayitOl = new KayitOl();
+           
             
         }
-        //public KayitOl kayitOl;
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -30,32 +30,29 @@ namespace BorsaProjesi
             {
                 OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
                 baglanti.Open();
-                OleDbCommand sorgu = new OleDbCommand("select yetki from kullanicibilgi where kullaniciadi=@kuladi and sifre=@sifre", baglanti);
-                sorgu.Parameters.AddWithValue("@kuladi", kullaniciadi.Text);
-                sorgu.Parameters.AddWithValue("@sifre", sifre.Text);
-                OleDbDataReader rd;
-                rd = sorgu.ExecuteReader();
-
-
+                OleDbCommand sorgu = new OleDbCommand("select yetki from kullanicibilgi where kullaniciadi=@kullaniciadi and sifre=@sifre", baglanti);
+                sorgu.Parameters.AddWithValue("kullaniciadi", kullaniciadi.Text);
+                sorgu.Parameters.AddWithValue("sifre", sifre.Text);
+                OleDbDataReader rd = sorgu.ExecuteReader();
+                Program.kullaniciadi = kullaniciadi.Text;
+              
+                
                 if (rd.HasRows) // Girilen K.Adı ve K.Parola Dahilinde Gelen Data var ise 
                 {
                     while (rd.Read()) // reader Okuyabiliyorsa
-                    {
+                    { 
+                         
                         if (rd["yetki"].ToString() == "1") // 1 Rolü Admin'e ait olarak Ayarlanmışdır
                         {
-                            // Kullanıcı Rolü 1 ise Admin Ekranı Aç 
-                            //_YonetimEkrani_Frm admin = new _YonetimEkrani_Frm();
-                            // admin.Show();
-                            // this.Hide();
-                            MessageBox.Show("admin");
+                            AdminPaneli frm = new AdminPaneli();
+                            frm.Show();
+                            this.Visible = false;
                         }
                         else
                         {
-                            // Kullanıcı Rolü 1 dışında ise Kullanıcı Ekranı Aç
-                            // Kullanicilar_Frm kul = new Kullanicilar_Frm();
-                            //kul.Show();
-                            //this.Hide();
-                            MessageBox.Show("kullanici");
+                            KullaniciEkrani frm = new KullaniciEkrani();
+                            frm.ShowDialog();
+                            this.Visible = false;
                         }
                     }
                 }

@@ -8,6 +8,10 @@ namespace BorsaProjesi
 {
     static class Program
     {
+        public static string kullaniciadi { get; set; }
+          public static string bakiye { get; set; }
+        public static string onay { get; set; }
+        //  , Soyad, Kullaniciadi, Sifre, Tckimlikno, Telefon, Email ,Adres;
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>
@@ -18,5 +22,8 @@ namespace BorsaProjesi
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
         }
+
+
+
     }
 }

@@ -16,5 +16,19 @@ namespace BorsaProjesi
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BakiyeOnay frm = new BakiyeOnay();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            UrunOnay frm = new UrunOnay();
+            frm.Show();
+            this.Close();
+        }
     }
 }

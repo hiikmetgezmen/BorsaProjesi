@@ -246,6 +246,7 @@ namespace BorsaProjesi
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "KayitOl";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KayitOl";
             this.ResumeLayout(false);
             this.PerformLayout();
