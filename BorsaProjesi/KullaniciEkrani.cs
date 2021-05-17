@@ -18,16 +18,15 @@ namespace BorsaProjesi
             InitializeComponent();
             listele();
         }
-      //  OleDbConnection connection = Login.connection;
-       // public static string KullaniciAdi { get; set; }
         void listele()
         {
+            //veritabanı bağlantısı
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
+            //dataridview'de hangi verilerin listeleneceğini seç
             DataSet liste = new DataSet();
-            OleDbDataAdapter urunliste = new OleDbDataAdapter("Select urunadi,fiyat,miktar from urun where onay = 1 and kullaniciadi='"+Program.kullaniciadi+"'", baglanti);
+            OleDbDataAdapter urunliste = new OleDbDataAdapter("Select urunadi,fiyat,miktar from urun where onay = 1 and  kullaniciadi='"+Program.kullaniciadi+"'", baglanti);
             urunliste.Fill(liste, "okunan veri"); 
-
             dataGridView1.DataSource = liste.Tables["okunan veri"];
             baglanti.Close();
             
@@ -35,6 +34,7 @@ namespace BorsaProjesi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //UrunEkle sayfasına git
             UrunEkle frm = new UrunEkle();
             frm.Show();
             this.Close();
@@ -56,19 +56,21 @@ namespace BorsaProjesi
 
         private void KullaniciEkrani_Load_1(object sender, EventArgs e)
         {
+         //labele kullanıcı adını yazdırma
         label2.Text = Program.kullaniciadi;
-        label1.Text = Program.bakiye;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-        Bakiye frm = new Bakiye();
+            //Bakiye sayfasına git
+            Bakiye frm = new Bakiye();
             frm.Show();
             this.Close();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            //SatinAl sayfasına git
             SatinAl frm = new SatinAl();
             frm.Show();
             this.Close();
@@ -76,7 +78,16 @@ namespace BorsaProjesi
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //Login sayfasına git
             Login frm = new Login();
+            frm.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //SatinAlmaGecmisi sayfasına git
+            SatinAlmaGecmisi frm = new SatinAlmaGecmisi();
             frm.Show();
             this.Close();
         }

@@ -19,6 +19,7 @@ namespace BorsaProjesi
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //BakiyeOnay sayfasına git
             BakiyeOnay frm = new BakiyeOnay();
             frm.Show();
             this.Close();
@@ -26,6 +27,7 @@ namespace BorsaProjesi
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //UrunOnay sayfasına git
             UrunOnay frm = new UrunOnay();
             frm.Show();
             this.Close();

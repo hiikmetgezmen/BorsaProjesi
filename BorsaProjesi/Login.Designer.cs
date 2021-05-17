@@ -60,6 +60,7 @@ namespace BorsaProjesi
             // 
             this.sifre.Location = new System.Drawing.Point(98, 124);
             this.sifre.Name = "sifre";
+            this.sifre.PasswordChar = '*';
             this.sifre.Size = new System.Drawing.Size(115, 20);
             this.sifre.TabIndex = 2;
             // 
@@ -101,7 +102,7 @@ namespace BorsaProjesi
             this.linkLabel1.Text = "Kaydol";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -114,7 +115,7 @@ namespace BorsaProjesi
             this.Controls.Add(this.sifre);
             this.Controls.Add(this.kullaniciadi);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);

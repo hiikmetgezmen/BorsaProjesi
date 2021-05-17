@@ -21,15 +21,18 @@ namespace BorsaProjesi
         string secili;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //datagridview'de satır seçme
             int secilii = dataGridView1.SelectedCells[1].RowIndex;
             secili = dataGridView1.Rows[secilii].Cells[1].Value.ToString();
         }
         void listele()
         {
+            //veri tabanı bağlantısı
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
+            //hangi ürünlerin listeleneceğini seç
             DataSet liste = new DataSet();
-            OleDbDataAdapter urunliste = new OleDbDataAdapter("Select kullaniciadi,urunadi,fiyat,miktar,onay from urun where onay=0", baglanti);
+            OleDbDataAdapter urunliste = new OleDbDataAdapter("Select kullaniciadi,urunadi,fiyat,miktar from urun where onay=0", baglanti);
             urunliste.Fill(liste, "okunan veri");
             dataGridView1.DataSource = liste.Tables["okunan veri"];
             baglanti.Close();
@@ -39,8 +42,8 @@ namespace BorsaProjesi
         {
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
+            //urunu onayla
             OleDbCommand ekle = new OleDbCommand("update urun set onay = 1 where urunadi =@urunadi ", baglanti);
-
             ekle.Parameters.AddWithValue("@urunadi", secili);
             ekle.ExecuteNonQuery();
 
@@ -65,7 +68,15 @@ namespace BorsaProjesi
 
         private void UrunOnay_Load(object sender, EventArgs e)
         {
+            //tüm satırı seç
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Login frm = new Login();
+            frm.Show();
+            this.Close();
         }
     }
 }

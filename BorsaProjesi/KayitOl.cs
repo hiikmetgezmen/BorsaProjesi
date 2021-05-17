@@ -21,23 +21,24 @@ namespace BorsaProjesi
        
         private void button1_Click(object sender, EventArgs e)
         {
+            //veritabanı bağlantısı
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
-                // while (true)
-                 //{
+            //kutuların boş girilmesini engelle
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
             {
-              
+              //sql ile hangi verileri dolduracağımızı seç
                     OleDbCommand sorgu = new OleDbCommand("select kullaniciadi from kullanicibilgi where kullaniciadi=@kullaniciadi", baglanti);
                     sorgu.Parameters.AddWithValue("@kuladi", textBox3.Text);
                     OleDbDataReader rd;
                     rd = sorgu.ExecuteReader();
-                    if (rd.Read())
+                    if (rd.Read())//eğer kullanıcı adı zaten varsa yeni kullanıcı adı iste
                     {
                         MessageBox.Show("Bu kullanıcı adı önceden alınmış...");
                     }
                     else
                     {
+                    //sorgu ile veritabanına verileri ekle
                         OleDbCommand ekle = new OleDbCommand("insert into kullanicibilgi(ad,soyad,kullaniciadi,sifre,tckimlikno,telefon,email,adres) values(@ad,@soyad,@kullaniciadi,@sifre,@tckimlikno,@telefon,@email,@adres)", baglanti);
                         ekle.Parameters.AddWithValue("@ad", textBox1.Text);
                         ekle.Parameters.AddWithValue("@soyad", textBox2.Text);
