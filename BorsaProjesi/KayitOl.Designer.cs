@@ -29,14 +29,14 @@ namespace BorsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.ad = new System.Windows.Forms.TextBox();
+            this.Soyad = new System.Windows.Forms.TextBox();
+            this.kullaniciAdi = new System.Windows.Forms.TextBox();
+            this.sifre = new System.Windows.Forms.TextBox();
+            this.tcno = new System.Windows.Forms.TextBox();
+            this.telefon = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
+            this.adres = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,68 +45,69 @@ namespace BorsaProjesi
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.kaydol = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // ad
             // 
-            this.textBox1.Location = new System.Drawing.Point(171, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 0;
+            this.ad.Location = new System.Drawing.Point(171, 78);
+            this.ad.Name = "ad";
+            this.ad.Size = new System.Drawing.Size(136, 20);
+            this.ad.TabIndex = 1;
             // 
-            // textBox2
+            // Soyad
             // 
-            this.textBox2.Location = new System.Drawing.Point(171, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 1;
+            this.Soyad.Location = new System.Drawing.Point(171, 112);
+            this.Soyad.Name = "Soyad";
+            this.Soyad.Size = new System.Drawing.Size(136, 20);
+            this.Soyad.TabIndex = 2;
             // 
-            // textBox3
+            // kullaniciAdi
             // 
-            this.textBox3.Location = new System.Drawing.Point(171, 149);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 20);
-            this.textBox3.TabIndex = 2;
+            this.kullaniciAdi.Location = new System.Drawing.Point(171, 149);
+            this.kullaniciAdi.Name = "kullaniciAdi";
+            this.kullaniciAdi.Size = new System.Drawing.Size(136, 20);
+            this.kullaniciAdi.TabIndex = 3;
             // 
-            // textBox4
+            // sifre
             // 
-            this.textBox4.Location = new System.Drawing.Point(171, 184);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 20);
-            this.textBox4.TabIndex = 3;
+            this.sifre.Location = new System.Drawing.Point(171, 184);
+            this.sifre.Name = "sifre";
+            this.sifre.PasswordChar = '*';
+            this.sifre.Size = new System.Drawing.Size(136, 20);
+            this.sifre.TabIndex = 4;
             // 
-            // textBox5
+            // tcno
             // 
-            this.textBox5.Location = new System.Drawing.Point(171, 220);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 20);
-            this.textBox5.TabIndex = 0;
+            this.tcno.Location = new System.Drawing.Point(171, 220);
+            this.tcno.Name = "tcno";
+            this.tcno.Size = new System.Drawing.Size(136, 20);
+            this.tcno.TabIndex = 5;
             // 
-            // textBox6
+            // telefon
             // 
-            this.textBox6.Location = new System.Drawing.Point(171, 253);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 20);
-            this.textBox6.TabIndex = 1;
+            this.telefon.Location = new System.Drawing.Point(171, 253);
+            this.telefon.Name = "telefon";
+            this.telefon.Size = new System.Drawing.Size(136, 20);
+            this.telefon.TabIndex = 6;
             // 
-            // textBox7
+            // email
             // 
-            this.textBox7.Location = new System.Drawing.Point(171, 288);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(238, 20);
-            this.textBox7.TabIndex = 2;
+            this.email.Location = new System.Drawing.Point(171, 288);
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(238, 20);
+            this.email.TabIndex = 7;
             // 
-            // textBox8
+            // adres
             // 
-            this.textBox8.Location = new System.Drawing.Point(171, 321);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(238, 120);
-            this.textBox8.TabIndex = 3;
+            this.adres.Location = new System.Drawing.Point(171, 321);
+            this.adres.Multiline = true;
+            this.adres.Name = "adres";
+            this.adres.Size = new System.Drawing.Size(238, 120);
+            this.adres.TabIndex = 8;
             // 
             // label1
             // 
@@ -180,15 +181,15 @@ namespace BorsaProjesi
             this.label8.TabIndex = 4;
             this.label8.Text = "Adres:";
             // 
-            // button1
+            // kaydol
             // 
-            this.button1.Location = new System.Drawing.Point(171, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 34);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Kayıt Ol";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.kaydol.Location = new System.Drawing.Point(171, 447);
+            this.kaydol.Name = "kaydol";
+            this.kaydol.Size = new System.Drawing.Size(90, 34);
+            this.kaydol.TabIndex = 9;
+            this.kaydol.Text = "Kayıt Ol";
+            this.kaydol.UseVisualStyleBackColor = true;
+            this.kaydol.Click += new System.EventHandler(this.kaydol_Click);
             // 
             // label9
             // 
@@ -205,7 +206,7 @@ namespace BorsaProjesi
             this.linkLabel1.Location = new System.Drawing.Point(258, 506);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(47, 13);
-            this.linkLabel1.TabIndex = 7;
+            this.linkLabel1.TabIndex = 10;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Giriş yap";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -228,7 +229,7 @@ namespace BorsaProjesi
             this.Controls.Add(this.label10);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.kaydol);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -237,14 +238,14 @@ namespace BorsaProjesi
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.adres);
+            this.Controls.Add(this.email);
+            this.Controls.Add(this.sifre);
+            this.Controls.Add(this.telefon);
+            this.Controls.Add(this.kullaniciAdi);
+            this.Controls.Add(this.tcno);
+            this.Controls.Add(this.Soyad);
+            this.Controls.Add(this.ad);
             this.Name = "KayitOl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KayitOl";
@@ -255,14 +256,14 @@ namespace BorsaProjesi
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox ad;
+        private System.Windows.Forms.TextBox Soyad;
+        private System.Windows.Forms.TextBox kullaniciAdi;
+        private System.Windows.Forms.TextBox sifre;
+        private System.Windows.Forms.TextBox tcno;
+        private System.Windows.Forms.TextBox telefon;
+        private System.Windows.Forms.TextBox email;
+        private System.Windows.Forms.TextBox adres;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -271,7 +272,7 @@ namespace BorsaProjesi
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button kaydol;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label10;

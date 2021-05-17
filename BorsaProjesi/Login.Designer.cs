@@ -29,7 +29,7 @@ namespace BorsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.Giris = new System.Windows.Forms.Button();
             this.kullaniciadi = new System.Windows.Forms.TextBox();
             this.sifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,15 +38,15 @@ namespace BorsaProjesi
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // button1
+            // Giris
             // 
-            this.button1.Location = new System.Drawing.Point(109, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Giris.Location = new System.Drawing.Point(109, 174);
+            this.Giris.Name = "Giris";
+            this.Giris.Size = new System.Drawing.Size(85, 31);
+            this.Giris.TabIndex = 0;
+            this.Giris.Text = "Giriş";
+            this.Giris.UseVisualStyleBackColor = true;
+            this.Giris.Click += new System.EventHandler(this.Giris_Click);
             // 
             // kullaniciadi
             // 
@@ -60,6 +60,7 @@ namespace BorsaProjesi
             // 
             this.sifre.Location = new System.Drawing.Point(98, 124);
             this.sifre.Name = "sifre";
+            this.sifre.PasswordChar = '*';
             this.sifre.Size = new System.Drawing.Size(115, 20);
             this.sifre.TabIndex = 2;
             // 
@@ -101,7 +102,7 @@ namespace BorsaProjesi
             this.linkLabel1.Text = "Kaydol";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,10 +114,10 @@ namespace BorsaProjesi
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sifre);
             this.Controls.Add(this.kullaniciadi);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Controls.Add(this.Giris);
+            this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +125,7 @@ namespace BorsaProjesi
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Giris;
         private System.Windows.Forms.TextBox kullaniciadi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

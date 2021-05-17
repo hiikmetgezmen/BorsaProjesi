@@ -29,40 +29,40 @@ namespace BorsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.urun_ekle = new System.Windows.Forms.Button();
+            this.fiyat = new System.Windows.Forms.TextBox();
+            this.miktar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Don = new System.Windows.Forms.Button();
+            this.urunsec = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // button1
+            // urun_ekle
             // 
-            this.button1.Location = new System.Drawing.Point(181, 254);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(82, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ürün Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.urun_ekle.Location = new System.Drawing.Point(181, 254);
+            this.urun_ekle.Name = "urun_ekle";
+            this.urun_ekle.Size = new System.Drawing.Size(82, 31);
+            this.urun_ekle.TabIndex = 0;
+            this.urun_ekle.Text = "Ürün Ekle";
+            this.urun_ekle.UseVisualStyleBackColor = true;
+            this.urun_ekle.Click += new System.EventHandler(this.urun_ekle_Click);
             // 
-            // textBox2
+            // fiyat
             // 
-            this.textBox2.Location = new System.Drawing.Point(219, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 1;
+            this.fiyat.Location = new System.Drawing.Point(219, 159);
+            this.fiyat.Name = "fiyat";
+            this.fiyat.Size = new System.Drawing.Size(121, 20);
+            this.fiyat.TabIndex = 1;
             // 
-            // textBox3
+            // miktar
             // 
-            this.textBox3.Location = new System.Drawing.Point(219, 197);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 1;
+            this.miktar.Location = new System.Drawing.Point(219, 197);
+            this.miktar.Name = "miktar";
+            this.miktar.Size = new System.Drawing.Size(121, 20);
+            this.miktar.TabIndex = 1;
             // 
             // label1
             // 
@@ -101,20 +101,20 @@ namespace BorsaProjesi
             this.label4.TabIndex = 3;
             this.label4.Text = "Ürün Ekle";
             // 
-            // button2
+            // Don
             // 
-            this.button2.Location = new System.Drawing.Point(270, 254);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Geri dön";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Don.Location = new System.Drawing.Point(270, 254);
+            this.Don.Name = "Don";
+            this.Don.Size = new System.Drawing.Size(79, 30);
+            this.Don.TabIndex = 4;
+            this.Don.Text = "Geri dön";
+            this.Don.UseVisualStyleBackColor = true;
+            this.Don.Click += new System.EventHandler(this.Don_Click);
             // 
-            // comboBox1
+            // urunsec
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.urunsec.FormattingEnabled = true;
+            this.urunsec.Items.AddRange(new object[] {
             "Elma",
             "Armut",
             "Karpuz",
@@ -126,25 +126,25 @@ namespace BorsaProjesi
             "Erik",
             "Bilgisayar",
             "Telefon"});
-            this.comboBox1.Location = new System.Drawing.Point(219, 114);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 5;
+            this.urunsec.Location = new System.Drawing.Point(219, 114);
+            this.urunsec.Name = "urunsec";
+            this.urunsec.Size = new System.Drawing.Size(121, 21);
+            this.urunsec.TabIndex = 5;
             // 
             // UrunEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 399);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.urunsec);
+            this.Controls.Add(this.Don);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.miktar);
+            this.Controls.Add(this.fiyat);
+            this.Controls.Add(this.urun_ekle);
             this.Name = "UrunEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UrunEkle";
@@ -155,14 +155,14 @@ namespace BorsaProjesi
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button urun_ekle;
+        private System.Windows.Forms.TextBox fiyat;
+        private System.Windows.Forms.TextBox miktar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button Don;
+        private System.Windows.Forms.ComboBox urunsec;
     }
 }

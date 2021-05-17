@@ -29,49 +29,49 @@ namespace BorsaProjesi
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BakiyeOnay = new System.Windows.Forms.Button();
+            this.UrunOnay = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // BakiyeOnay
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(41, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 73);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Bakiye Onay";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BakiyeOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BakiyeOnay.Location = new System.Drawing.Point(41, 66);
+            this.BakiyeOnay.Name = "BakiyeOnay";
+            this.BakiyeOnay.Size = new System.Drawing.Size(83, 73);
+            this.BakiyeOnay.TabIndex = 0;
+            this.BakiyeOnay.Text = "Bakiye Onay";
+            this.BakiyeOnay.UseVisualStyleBackColor = true;
+            this.BakiyeOnay.Click += new System.EventHandler(this.BakiyeOnay_Click);
             // 
-            // button2
+            // UrunOnay
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(156, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 73);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Ürün \r\nOnay";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.UrunOnay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.UrunOnay.Location = new System.Drawing.Point(156, 66);
+            this.UrunOnay.Name = "UrunOnay";
+            this.UrunOnay.Size = new System.Drawing.Size(83, 73);
+            this.UrunOnay.TabIndex = 0;
+            this.UrunOnay.Text = "Ürün \r\nOnay";
+            this.UrunOnay.UseVisualStyleBackColor = true;
+            this.UrunOnay.Click += new System.EventHandler(this.UrunOnay_Click);
             // 
             // AdminPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 212);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.UrunOnay);
+            this.Controls.Add(this.BakiyeOnay);
             this.Name = "AdminPaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminPaneli";
+            this.Text = "Admin Paneli";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BakiyeOnay;
+        private System.Windows.Forms.Button UrunOnay;
     }
 }

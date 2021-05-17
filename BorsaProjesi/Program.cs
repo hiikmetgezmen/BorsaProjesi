@@ -8,10 +8,15 @@ namespace BorsaProjesi
 {
     static class Program
     {
+        //Program boyunca kullanabileceğim veriler
         public static string kullaniciadi { get; set; }
-          public static string bakiye { get; set; }
-        public static string onay { get; set; }
-        //  , Soyad, Kullaniciadi, Sifre, Tckimlikno, Telefon, Email ,Adres;
+        public static string bakiyee { get; set; }
+        public static string eklenenpara { get; set; }
+        public static string urunsahibi { get; set; }
+        public static string urun { get; set; }
+        public static string fiyat { get; set; }
+        public static string miktar { get; set; }
+        public static string para { get; set; }
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>
