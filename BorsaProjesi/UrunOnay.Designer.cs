@@ -111,7 +111,7 @@ namespace BorsaProjesi
             this.Controls.Add(this.dataGridView1);
             this.Name = "UrunOnay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UrunOnay";
+            this.Text = "Ürün Onay";
             this.Load += new System.EventHandler(this.UrunOnay_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
