@@ -28,7 +28,6 @@ namespace BorsaProjesi
 
         private void UrunOnay_Click(object sender, EventArgs e)
         {
-         //UrunOnay sayfasına git
             UrunOnay frm = new UrunOnay();
             frm.Show();
             this.Close();
