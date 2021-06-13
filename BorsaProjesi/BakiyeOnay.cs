@@ -47,7 +47,6 @@ namespace BorsaProjesi
             //veritabanı bağlantısı
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
-
             x = int.Parse(Program.bakiyee);
             y = int.Parse(Program.eklenenpara);
             toplam = x + y;//Mevcut bakiye ile eklenen parayı topla

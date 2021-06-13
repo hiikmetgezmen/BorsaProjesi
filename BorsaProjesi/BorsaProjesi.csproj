@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +56,12 @@
     <Compile Include="AdminPaneli.Designer.cs">
       <DependentUpon>AdminPaneli.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlisRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlisRaporu.Designer.cs">
+      <DependentUpon>AlisRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Bakiye.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +73,12 @@
     </Compile>
     <Compile Include="BakiyeOnay.Designer.cs">
       <DependentUpon>BakiyeOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doviz.Designer.cs">
+      <DependentUpon>Doviz.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -96,6 +112,12 @@
     <Compile Include="SatinAlmaGecmisi.Designer.cs">
       <DependentUpon>SatinAlmaGecmisi.cs</DependentUpon>
     </Compile>
+    <Compile Include="SatisRaporu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatisRaporu.Designer.cs">
+      <DependentUpon>SatisRaporu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UrunEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +133,17 @@
     <EmbeddedResource Include="AdminPaneli.resx">
       <DependentUpon>AdminPaneli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlisRaporu.resx">
+      <DependentUpon>AlisRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Bakiye.resx">
       <DependentUpon>Bakiye.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BakiyeOnay.resx">
       <DependentUpon>BakiyeOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doviz.resx">
+      <DependentUpon>Doviz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullaniciEkrani.resx">
       <DependentUpon>KullaniciEkrani.cs</DependentUpon>
@@ -147,6 +175,7 @@
     <EmbeddedResource Include="UrunOnay.resx">
       <DependentUpon>UrunOnay.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

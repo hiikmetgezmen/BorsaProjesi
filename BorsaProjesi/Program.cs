@@ -17,6 +17,8 @@ namespace BorsaProjesi
         public static string fiyat { get; set; }
         public static string miktar { get; set; }
         public static string para { get; set; }
+        public static string parabirimi { get; set; }
+        public static string doviz { get; set; }
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>

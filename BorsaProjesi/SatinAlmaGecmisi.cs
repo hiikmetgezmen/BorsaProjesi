@@ -61,5 +61,19 @@ namespace BorsaProjesi
             frm.Show();
             this.Close();
         }
+
+        private void AlisRaporu_Click(object sender, EventArgs e)
+        {
+            AlisRaporu frm = new AlisRaporu();
+            frm.Show();
+            this.Close();
+        }
+
+        private void SatisRaporu_Click(object sender, EventArgs e)
+        {
+            SatisRaporu frm = new SatisRaporu();
+            frm.Show();
+            this.Close();
+        }
     }
 }

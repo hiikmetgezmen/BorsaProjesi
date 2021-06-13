@@ -46,5 +46,14 @@ namespace BorsaProjesi
             this.Close();
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //KayitOl sayfasına git
+            Doviz frm = new Doviz();
+            frm.Show();
+            this.Close();
+            
+        }
     }
 }
