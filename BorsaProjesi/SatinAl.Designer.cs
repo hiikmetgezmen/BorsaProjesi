@@ -37,7 +37,7 @@ namespace BorsaProjesi
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FiyatBelirle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -117,21 +117,22 @@ namespace BorsaProjesi
             this.dataGridView2.Size = new System.Drawing.Size(116, 47);
             this.dataGridView2.TabIndex = 13;
             // 
-            // dateTimePicker1
+            // FiyatBelirle
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(276, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(181, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.Value = new System.DateTime(2021, 5, 17, 0, 0, 0, 0);
+            this.FiyatBelirle.Location = new System.Drawing.Point(305, 373);
+            this.FiyatBelirle.Name = "FiyatBelirle";
+            this.FiyatBelirle.Size = new System.Drawing.Size(80, 23);
+            this.FiyatBelirle.TabIndex = 15;
+            this.FiyatBelirle.Text = "Fiyat Belirle";
+            this.FiyatBelirle.UseVisualStyleBackColor = true;
+            this.FiyatBelirle.Click += new System.EventHandler(this.FiyatBelirle_Click);
             // 
             // SatinAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(491, 406);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FiyatBelirle);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
@@ -160,6 +161,6 @@ namespace BorsaProjesi
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button FiyatBelirle;
     }
 }

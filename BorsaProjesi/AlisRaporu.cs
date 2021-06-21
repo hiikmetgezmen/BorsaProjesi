@@ -47,67 +47,85 @@ namespace BorsaProjesi
         {
             OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = vt.mdb");
             baglanti.Open();
-            DataSet dt = new DataSet();
-            OleDbDataAdapter da = new OleDbDataAdapter("Select tarih,urunadi,fiyat,miktar from fatura where tarih between @tarih1 and @tarih2 and alici='" + Program.kullaniciadi + "'", baglanti);
+            DataSet dt1 = new DataSet();
+            //tarihler arasındaki verileri listele
+            OleDbDataAdapter da = new OleDbDataAdapter("Select tarih,urunadi,fiyat,miktar from fatura where tarih between @tarih1 and @tarih2 and kuladi='" + Program.kullaniciadi + "'", baglanti);
             da.SelectCommand.Parameters.AddWithValue("@tarih1", dateTimePicker1.Value.ToString("d.MM.yyyy"));
             da.SelectCommand.Parameters.AddWithValue("@tarih2", dateTimePicker2.Value.ToString("d.MM.yyyy"));
            
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            da.Fill(dt1,"veri");
+            dataGridView1.DataSource = dt1.Tables["veri"];
             baglanti.Close();
+            
+            //Tabloların isimlerini düzenle
+            dataGridView1.Columns[0].HeaderText = "Tarih";
+
+            dataGridView1.Columns[1].HeaderText = "Satılan Ürün";
+
+            dataGridView1.Columns[2].HeaderText = "Birim Fiyatı";
+
+            dataGridView1.Columns[3].HeaderText = "Ürün Miktarı";
         }
 
         private void indir_Click(object sender, EventArgs e)
         {
+            //DataGriview içindekiverileri excele atama
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
 
+            excel.Visible = true;
 
-                Excel.Application xlApp;
-                Excel.Workbook xlWorkBook;
-                Excel.Worksheet xlWorkSheet;
-                object misValue = System.Reflection.Missing.Value;
+            Microsoft.Office.Interop.Excel.Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
 
-                xlApp = new Excel.Application();
-                xlWorkBook = xlApp.Workbooks.Add(misValue);
-                xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-                int i = 0;
-                int j = 0;
+            Microsoft.Office.Interop.Excel.Worksheet sheet1 = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Sheets[1];
 
-                for (i = 0; i <= dataGridView1.RowCount - 1; i++)
-                {
-                    for (j = 0; j <= dataGridView1.ColumnCount - 1; j++)
-                    {
-                        DataGridViewCell cell = dataGridView1[j, i];
-                        xlWorkSheet.Cells[i + 1, j + 1] = cell.Value;
-                    }
-                }
+            int StartCol = 1;
 
-                xlWorkBook.SaveAs("csharp.net-informations.xls", Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
-                xlWorkBook.Close(true, misValue, misValue);
-                xlApp.Quit();
+            int StartRow = 1;
 
-                releaseObject(xlWorkSheet);
-                releaseObject(xlWorkBook);
-                releaseObject(xlApp);
+            for (int j = 0; j< dataGridView1.Columns.Count; j++)
+            {
 
-                MessageBox.Show("Excel file created , you can find the file c:\\csharp.net-informations.xls");
+                Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow, StartCol + j];
+
+                myRange.Value2 = dataGridView1.Columns[j].HeaderText;
+
             }
 
-            private void releaseObject(object obj)
+            StartRow++;
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
-                try
+
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
                 {
-                    System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
-                    obj = null;
+
+                    try
+                    {
+
+                        Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[StartRow + i, StartCol + j];
+
+                        myRange.Value2 = dataGridView1[j, i].Value == null ? "" : dataGridView1[j, i].Value;
+
+                    }
+
+                    catch
+                    {
+
+                        MessageBox.Show("Hata");
+
+                    }
+
                 }
-                catch (Exception ex)
-                {
-                    obj = null;
-                    MessageBox.Show("Exception Occured while releasing object " + ex.ToString());
-                }
-                finally
-                {
-                    GC.Collect();
-                }
+
             }
         }
+
+        private void GeriDon_Click(object sender, EventArgs e)
+        {
+            //KullaniciEkrani sayfasına git
+            SatinAlmaGecmisi frm = new SatinAlmaGecmisi();
+            frm.Show();
+            this.Close();
+        }
+    }
 }

@@ -35,6 +35,7 @@ namespace BorsaProjesi
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.Sorgula = new System.Windows.Forms.Button();
             this.indir = new System.Windows.Forms.Button();
+            this.GeriDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +89,26 @@ namespace BorsaProjesi
             this.indir.Name = "indir";
             this.indir.Size = new System.Drawing.Size(75, 23);
             this.indir.TabIndex = 7;
-            this.indir.Text = "button1";
+            this.indir.Text = "Raporu Al";
             this.indir.UseVisualStyleBackColor = true;
             this.indir.Click += new System.EventHandler(this.indir_Click);
+            // 
+            // GeriDon
+            // 
+            this.GeriDon.Location = new System.Drawing.Point(723, 424);
+            this.GeriDon.Name = "GeriDon";
+            this.GeriDon.Size = new System.Drawing.Size(75, 23);
+            this.GeriDon.TabIndex = 8;
+            this.GeriDon.Text = "Geri Dön";
+            this.GeriDon.UseVisualStyleBackColor = true;
+            this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
             // 
             // AlisRaporu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.GeriDon);
             this.Controls.Add(this.indir);
             this.Controls.Add(this.Sorgula);
             this.Controls.Add(this.dateTimePicker2);
@@ -120,5 +132,6 @@ namespace BorsaProjesi
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button Sorgula;
         private System.Windows.Forms.Button indir;
+        private System.Windows.Forms.Button GeriDon;
     }
 }

@@ -87,7 +87,7 @@ namespace BorsaProjesi
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(133, 239);
+            this.linkLabel1.Location = new System.Drawing.Point(138, 239);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(39, 13);
             this.linkLabel1.TabIndex = 5;

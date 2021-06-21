@@ -130,6 +130,12 @@
     <Compile Include="UrunOnay.Designer.cs">
       <DependentUpon>UrunOnay.cs</DependentUpon>
     </Compile>
+    <Compile Include="İstekUrun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="İstekUrun.Designer.cs">
+      <DependentUpon>İstekUrun.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminPaneli.resx">
       <DependentUpon>AdminPaneli.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,11 +175,17 @@
     <EmbeddedResource Include="SatinAlmaGecmisi.resx">
       <DependentUpon>SatinAlmaGecmisi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SatisRaporu.resx">
+      <DependentUpon>SatisRaporu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UrunEkle.resx">
       <DependentUpon>UrunEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UrunOnay.resx">
       <DependentUpon>UrunOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="İstekUrun.resx">
+      <DependentUpon>İstekUrun.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
